@@ -1,0 +1,8 @@
+F:\CODES C#\hogwartz ahmad project\hagwartz-project-AE\bin\Debug\hogwartz ahmad project.exe.config
+F:\CODES C#\hogwartz ahmad project\hagwartz-project-AE\bin\Debug\hogwartz ahmad project.exe
+F:\CODES C#\hogwartz ahmad project\hagwartz-project-AE\bin\Debug\hogwartz ahmad project.pdb
+F:\CODES C#\hogwartz ahmad project\hagwartz-project-AE\obj\Debug\hogwartz ahmad project.csproj.AssemblyReference.cache
+F:\CODES C#\hogwartz ahmad project\hagwartz-project-AE\obj\Debug\hogwartz ahmad project.csproj.SuggestedBindingRedirects.cache
+F:\CODES C#\hogwartz ahmad project\hagwartz-project-AE\obj\Debug\hogwartz ahmad project.csproj.CoreCompileInputs.cache
+F:\CODES C#\hogwartz ahmad project\hagwartz-project-AE\obj\Debug\hogwartz ahmad project.exe
+F:\CODES C#\hogwartz ahmad project\hagwartz-project-AE\obj\Debug\hogwartz ahmad project.pdb

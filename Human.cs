@@ -8,16 +8,16 @@ namespace hogwartz_ahmad_project
 {
     internal class Human
     {
-        public string Name { get; set; }
-        public string Familyname { get; set; }
-        public string Dateofbirth { get; set; }
-        public string Gender { get; set; }
+        public string name { get; set; }
+        public string familyname { get; set; }
+        public string dateofbirth { get; set; }
+        public string gender { get; set; }
         public string father { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public Blood Bloodname { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+        public blood bloodname { get; set; }
     }
-    enum Blood
+    enum blood
     {
         Muggleblood,
         Pureblood,

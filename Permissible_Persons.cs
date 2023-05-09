@@ -8,15 +8,24 @@ namespace hogwartz_ahmad_project
 {
     internal class Permissible_Persons : Human
     {
-        public int NUmberroom { get; set; }
+        public int nUmberroom { get; set; }
         public string schedule { get; set; }
-        public Pet Petofpersons { get; set; }  
-
+        public Pet petofpersons { get; set; }
+        bool Suitcase { get; set; }
+        public role roleofpersons { get; set; }
+        public string postmessage { get; set; } 
+        public Group persongroup { get; set; }
     }
-    enum Pet
+    public enum Pet
     {
         i,
         cat,
         rat
     }
+    public enum role
+    {
+        teacher,
+        student
+    }
+
 }
