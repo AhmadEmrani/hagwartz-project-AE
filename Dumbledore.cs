@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace hogwartz_ahmad_project
@@ -34,52 +35,7 @@ namespace hogwartz_ahmad_project
             }
 
         }
-        //public static void PassCode()
-        //{
-        //    //Random rnd = new Random();
 
-        //    //for (int j = 0; j < 4; j++)
-        //    //{
-        //    //    Console.WriteLine(rnd.Next(10, 20)); // returns random integers >= 10 and < 20
-        //    //}
-
-
-        //    // making table 
-        //    //
-
-        //    Random rnd = new Random();
-        //    int size_table = rnd.Next(5,8);
-        //    for(int i=0 ; i<((size_table+1)+(size_table*2));i++)
-        //    {
-        //        Console.Write("_");
-        //    }
-        //    Console.Write("\n");
-        //    for (int J = 0; J < ((size_table + 1) + (size_table * 2)); J++)
-        //    {
-        //        for (int i = 0; i < ((size_table + 1) + (size_table * 2)); i++)
-        //        {
-        //            if ((i % 3) == 0)
-        //            {
-        //                Console.Write("|");
-        //            }
-        //            else
-        //            {
-        //                Console.Write(" ");
-        //            }
-        //        }
-        //        if (J != ((size_table + 1) + (size_table * 2)) )
-        //        {
-        //            Console.Write("\n");
-        //        }
-            
-        //    }
-        //    for (int i = 0; i < ((size_table + 1) + (size_table * 2)); i++)
-        //    {
-        //        Console.Write("_");
-        //    }
-        //    Console.ReadKey();
-
-        //}
         public static int DisplayAction()
         {
             int final = 0;
@@ -95,27 +51,40 @@ namespace hogwartz_ahmad_project
             final = int.Parse(Console.ReadLine());
             return final;
         }
-        public static void Sending_Invitation(List<Permissible_Persons> peoples , List<Student> studentss)
+        public static void Sending_Invitation(List<Permissible_Persons> peoples, List<Student> studentss)
         {
-            foreach(Permissible_Persons permited in peoples)
+            foreach (Permissible_Persons permited in peoples)
             {
-                if(permited.roleofpersons == role.student)
+                if (permited.roleofpersons == role.student)
                 {
                     Student instasncestudent = new Student();
-                    instasncestudent.name= permited.name;
-                    instasncestudent.familyname= permited.familyname;
+                    instasncestudent.name = permited.name;
+                    instasncestudent.familyname = permited.familyname;
                     instasncestudent.dateofbirth = permited.dateofbirth;
-                    instasncestudent.gender= permited.gender;
-                    instasncestudent.father= permited.father;
-                    instasncestudent.username = permited.username; 
-                    instasncestudent.password= permited.password;
-                    instasncestudent.bloodname= permited.bloodname;
-                    instasncestudent.roleofpersons= permited.roleofpersons; 
-                    ///////////////// invitation message :)
+                    instasncestudent.gender = permited.gender;
+                    instasncestudent.father = permited.father;
+                    instasncestudent.username = permited.username;
+                    instasncestudent.password = permited.password;
+                    instasncestudent.bloodname = permited.bloodname;
+                    instasncestudent.roleofpersons = permited.roleofpersons;
+
+                    ///////////////// invitation message and making ticket :)
+
+                    Random random_timefor_ticket = new Random();
+
+                    instasncestudent.ticket = $"dear student your arrive time : {DateTime.Now.Year} / {DateTime.Now.Month} / {DateTime.Now.Day}" +
+                        $" in =>{DateTime.Now.Hour} : {DateTime.Now.Minute + random_timefor_ticket.Next(10, 15)}";
+                    Console.ForegroundColor= ConsoleColor.Green;
+                    Console.WriteLine($"invitation sent to ==> {instasncestudent.name}    \t{instasncestudent.familyname}    \t{instasncestudent.username}  " +
+                        $"  \t{instasncestudent.ticket} \n");
+                    Thread.Sleep(25);
+                    Console.ResetColor();
                     studentss.Add(instasncestudent);
                 }
             }
-            
+            Console.ResetColor();
+
         }
+
     }
 }

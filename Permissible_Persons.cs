@@ -18,7 +18,7 @@ namespace hogwartz_ahmad_project
     }
     public enum Pet
     {
-        i,
+        owl,
         cat,
         rat
     }

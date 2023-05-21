@@ -12,6 +12,9 @@ namespace hogwartz_ahmad_project
         public int term_num = 0;
         public int dorm_num { get; set; } //khabgah
         public string ticket { get; set; } 
+        public string message_to_dumbledor { get; set; }
+        public string ticke_emergency { get; set; }
     }
+
    
 }

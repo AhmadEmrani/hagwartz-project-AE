@@ -52,22 +52,25 @@ namespace project_1_and_other_stuff
         }
         public static void collumright()
         {
-            WriteColor("[________________________________________________]", ConsoleColor.Green);
+            WriteColor("[________________________________________________]", ConsoleColor.DarkYellow);
         }
         public static void loading()
         {
-            for (int j = 0; j < 15; j++)
+            string loading = "loading...";
+            if(Console.CursorTop!= 0)
             {
-                for (int i = 0; i < j + 1; i++)
-                {
-                    Console.BackgroundColor = ConsoleColor.White;
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write(" ");
-                    Console.ResetColor();
-                }
-                Thread.Sleep(100);
-                Console.Clear();
+                Console.SetCursorPosition(0, Console.CursorTop + 1);
             }
+            for(int i=0 ; i < loading.Length; i++)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.Write(loading[i]);
+                Thread.Sleep(100);
+            }
+            Thread.Sleep(300);
+            Console.ResetColor();
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.WriteLine("                    ");
         }
 
         public static void Turn()
@@ -91,7 +94,7 @@ namespace project_1_and_other_stuff
             Cw.WriteColor("_____________________[WELCOME    to    HAGWARTS]_____________________", ConsoleColor.DarkMagenta);
             Console.WriteLine("\n");
         }
-
+     
         //public static void loadingsystem()
         //{
         //    int counter = 0;

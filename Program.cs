@@ -47,6 +47,7 @@ namespace hogwartz_ahmad_project
             }
             while (true)
             {
+                Cw.loading();
                 Cw.Welcome_Hagwartz();
                 Cw.WriteColor("[which user :] ", ConsoleColor.DarkRed);
                 Cw.collumright();
@@ -67,15 +68,37 @@ namespace hogwartz_ahmad_project
 
                 switch (firstchoice)
                 {
+                    
                         case 1://Dumbeldore
                         {
-                            Console.Clear();
-                            int choice_of_Dumbledore = Dumbledore.DisplayAction();
-                            if(choice_of_Dumbledore== 1)
+                            Cw.loading();
+                            bool dumbledore_choice_switch = true;
+                            while (dumbledore_choice_switch)
                             {
-                                Dumbledore.Sending_Invitation(people, students);
+                                Console.Clear();
+                                Cw.Welcome_Hagwartz();
+                                int choice_of_Dumbledore = Dumbledore.DisplayAction();
+                                if (choice_of_Dumbledore == 1)
+                                {
+                                    Dumbledore.Sending_Invitation(people, students);
 
+                                }
+                                else if (choice_of_Dumbledore == 2)
+                                {
+
+                                }
+                                else if (choice_of_Dumbledore == 3)
+                                {
+
+                                }
+                                Cw.WriteColor("[master if you have more work to do press] (y) [otherwise] (N)", ConsoleColor.DarkRed);
+                                string dumbledore_choice_switch_string = Console.ReadLine();
+                                if(dumbledore_choice_switch_string == "N")
+                                {
+                                    dumbledore_choice_switch = false;
+                                }
                             }
+                            Console.Clear();
                             break;
                         }
                         case 2://Teacher
